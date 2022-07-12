@@ -1,4 +1,6 @@
 package homework1;public class Homework2 {
+        import java.util.Scanner;
+        import java.util.Random;
 }
 public static void main(String[] args) {
         System.out.println(" Get ready to rumble!");
