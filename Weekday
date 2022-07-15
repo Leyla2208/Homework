@@ -6,17 +6,17 @@ public class weekplan {
 
         String[][] scedule = new String[7][2];
         scedule[0][0] = "Sunday";
-        scedule[0][1] = "Go to the cinema";
+        scedule[0][1] = "Go to the park";
         scedule[1][0] = "Monday";
-        scedule[1][1] = "Watch new film";
+        scedule[1][1] = "Do homework  ";
         scedule[2][0] = "Tuesday";
-        scedule[2][1] = "Go to the swimming pool";
+        scedule[2][1] = "Go to the voleybol";
         scedule[3][0] = "Wednesday";
-        scedule[3][1] = "Do yoga";
+        scedule[3][1] = "Do cardio";
         scedule[4][0] = "Thursday";
         scedule[4][1] = "Try to prepare new, tasty meal";
         scedule[5][0] = "Friday";
-        scedule[5][1] = "Read book";
+        scedule[5][1] = "Read new book";
         scedule[6][0] = "Saturday";
         scedule[6][1] = "Plan your next week";
         for (int i = 0; i < 7; i++) {
