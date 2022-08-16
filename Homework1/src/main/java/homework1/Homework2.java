@@ -2,55 +2,54 @@ package homework1;public class Homework2 {
         import java.util.Scanner;
         import java.util.Random;
 }
-public static void main(String[] args) {
-        System.out.println(" Get ready to rumble!");
+
+public class homework2 {
+    public static <string> void main(String[] args) {
+        System.out.println(" All set. Get ready to rumble!");
         String[][] square = new String[5][5];
         int i;
         int j;
-        for ( i = 0; i < 5; i++) {
-            for ( j = 0; j < 5; j++) {
-                square[i][j] = "- | ";
+        for ( i = 0; i < square.length; i++) {
+            for ( j = 0; j < square.length; j++) {
+                square[i][j] = "-|";
             }
         }
         while(true) {
             System.out.println();
-            for (i = 0; i < 5; i++) {
-                for ( j = 0; j < 5; j++) {
-                    System.out.print(square[i][j] + " ");
+            for (i = 0; i < square.length; i++) {
+                for ( j = 0; j < square.length; j++) {
+                    System.out.print(square[i][j] + "\t");
                 }
-                System.out.println(" ");
+                System.out.println("\t");
             }
-            int row= (int)(Math.random()*(4+1));
-            int col= (int)(Math.random()*(4+1));
-            System.out.println("Please, enter a line for fire: ");
-            Scanner in = new Scanner(System.in);
-            int line = in.nextInt();
-            System.out.println("Please, enter a shooting bar: ");
-            Scanner in1 = new Scanner(System.in);
-            int bar = in1.nextInt();
-            if(line>=0 && line<5 && bar>0 && bar<5){
-                if(line!=row || bar!=col){
-                    square[line][bar]="* | ";
+            Random row = new Random();
+            int resultRow = row.nextInt(5);
+            Random col = new Random();
+            int resultCol = col.nextInt(5);
+            System.out.println("Enter a line for fire");
+            Scanner r = new Scanner(System.in);
+            int line = r.nextInt();
+            System.out.println("Enter a bar for fire");
+            Scanner c = new Scanner(System.in);
+            int bar = c.nextInt();
+            if(line>0 && line<=5 && bar>0 && bar<=5){
+                if(line!=resultRow && bar!=resultCol){
+                    square[line-1][bar-1]="*|";
                 }
                 else{
-                    square[line][bar]="x|";
-                    for (i = 0; i < 5; i++) {
-                        for ( j = 0; j < 5; j++) {
-                            System.out.print(square[i][j] + " ");
+                    square[line-1][bar-1]="x|";
+                    for (i = 0; i < square.length; i++) {
+                        for ( j = 0; j < square.length; j++) {
+                            System.out.print(square[i][j] + "\t");
                         }
-                        System.out.println(" ");
+                        System.out.println("\t");
 
                     }
-                    System.out.println(" You have won!");
-
-                    break;  }
+                    System.out.println(" You have won!");  break;  }
             }
             else{
-                System.out.println("Please enter the number in [0 5) interval");
+                System.out.println("Please enter the number in (0 5] interval");
             }
         }
 
     }
-
-}
-
